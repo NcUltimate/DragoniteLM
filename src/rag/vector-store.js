@@ -4,7 +4,7 @@ export class VectorStore {
   constructor(config = {}) {
     this.config = config;
     this.client = null;
-    this.collectionName = 'lmnade_documents';
+    this.collectionName = 'dragonitelm_documents';
   }
 
   async initialize() {
@@ -21,7 +21,7 @@ export class VectorStore {
     } catch (error) {
       await this.client.createCollection({
         name: this.collectionName,
-        metadata: { description: 'LMnade document embeddings' }
+        metadata: { description: 'DragoniteLM document embeddings' }
       });
     }
   }

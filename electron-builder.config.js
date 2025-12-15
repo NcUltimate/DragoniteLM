@@ -1,6 +1,6 @@
 module.exports = {
-  appId: 'com.lmnade.app',
-  productName: 'LMnade',
+  appId: 'com.dragonitelm.app',
+  productName: 'DragoniteLM',
   directories: {
     output: 'dist'
   },

@@ -1,5 +1,5 @@
 {
-  "name": "lmnade",
+  "name": "dragonitelm",
   "version": "1.0.0",
   "description": "Lightweight RAG Desktop Application - A NotebookLM-inspired proof-of-concept",
   "main": "src/main/main.js",
@@ -40,8 +40,8 @@
     "wait-on": "^9.0.3"
   },
   "build": {
-    "appId": "com.lmnade.app",
-    "productName": "LMnade",
+    "appId": "com.dragonitelm.app",
+    "productName": "DragoniteLM",
     "directories": {
       "output": "dist"
     },

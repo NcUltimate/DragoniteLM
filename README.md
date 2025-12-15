@@ -1,4 +1,4 @@
-# LMnade - RAG-Powered Notebook
+# DragoniteLM - RAG-Powered Notebook
 
 An Electron desktop application for managing knowledge with AI-powered chat using advanced RAG. Motivated by NotebookLM, though I've had the idea for longer and have been wanting to build it.
 
@@ -8,8 +8,8 @@ Your knowledge stays on your system. No Cloud storage provider needed. An eventu
 
 ```bash
 # Clone the repository
-git clone https://github.com/NcUltimate/LM-RAG-Notebook.git
-cd LM-RAG-Notebook
+git clone https://github.com/NcUltimate/DragoniteLM.git
+cd DragoniteLM
 
 # Install dependencies
 npm install
@@ -25,7 +25,7 @@ npm start
 
 ## Overview
 
-LMnade is an Electron-based desktop application that combines note-taking with powerful AI chat capabilities. It uses advanced RAG techniques to provide contextual answers from your knowledge base, with persistent chat history and configurable response detail levels.
+DragoniteLM is an Electron-based desktop application that combines note-taking with powerful AI chat capabilities. It uses advanced RAG techniques to provide contextual answers from your knowledge base, with persistent chat history and configurable response detail levels.
 
 ## Core Technologies
 
