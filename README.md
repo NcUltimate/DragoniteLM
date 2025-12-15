@@ -1,6 +1,8 @@
-# LMnade - RAG-Powered Notebook
+# Dragonite LM - RAG-Powered Knowledge and Note taking
 
-An Electron desktop application for managing knowledge with AI-powered chat using advanced RAG. Motivated by NotebookLM, though I've had the idea for longer and have been wanting to build it.
+<img width="256" height="256" alt="dragonite-256x256" src="https://github.com/user-attachments/assets/aa5a23be-5514-4f4b-8583-6131aa2da68b" />
+
+DragoniteLM is an Electron desktop application for managing knowledge with AI-powered chat using advanced RAG. Motivated by NotebookLM, though I've had the idea for longer and have been wanting to build it.
 
 Your knowledge stays on your system. No Cloud storage provider needed. An eventual minor upgrade would be allowing selection of multiple system files for a given notebook.
 
