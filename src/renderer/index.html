@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+  <title>LMnade - RAG Notebook</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>LMnade</h1>
+      <div class="header-actions">
+        <button id="create-notebook-btn" class="btn btn-primary">+ New Notebook</button>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <aside class="sidebar">
+        <h2>Notebooks</h2>
+        <div id="notebooks-list" class="notebooks-list"></div>
+      </aside>
+
+      <main class="content-area">
+        <div id="notebook-view" class="notebook-view hidden">
+          <div class="notebook-header">
+            <h2 id="notebook-title"></h2>
+            <div class="notebook-actions">
+              <button id="add-knowledge-btn" class="btn btn-secondary">+ Add Knowledge</button>
+              <button id="delete-notebook-btn" class="btn btn-danger">Delete Notebook</button>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <button class="tab active" data-tab="knowledge">Knowledge</button>
+            <button class="tab" data-tab="chat">Chat</button>
+          </div>
+
+          <div id="knowledge-tab" class="tab-content active">
+            <div id="knowledge-list" class="knowledge-list"></div>
+          </div>
+
+          <div id="chat-tab" class="tab-content">
+            <div class="chat-header">
+              <div class="chat-detail-selector">
+                <button class="detail-btn" data-level="brief">Brief</button>
+                <button class="detail-btn active" data-level="normal">Normal</button>
+                <button class="detail-btn" data-level="detailed">Detailed</button>
+                <button class="detail-btn" data-level="meticulous">Meticulous</button>
+              </div>
+              <button id="chat-clear-btn" class="btn btn-danger-outline">Clear Chat</button>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div class="chat-input-container">
+              <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question about this notebook...">
+              <button id="chat-send-btn" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <p>Select a notebook or create a new one to get started</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="create-notebook-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Create Notebook</h3>
+      <input type="text" id="notebook-name-input" placeholder="Notebook name">
+      <div class="modal-actions">
+        <button id="create-notebook-submit" class="btn btn-primary">Create</button>
+        <button id="create-notebook-cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="add-knowledge-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Add Knowledge</h3>
+      <select id="knowledge-type-select">
+        <option value="note">Note</option>
+        <option value="pdf">PDF</option>
+        <option value="url">URL</option>
+        <option value="article">Article</option>
+      </select>
+      <input type="text" id="knowledge-title-input" placeholder="Title">
+      <textarea id="knowledge-content-input" placeholder="Content (for notes)"></textarea>
+      <button id="select-pdf-btn" class="btn btn-secondary hidden">Select PDF</button>
+      <div class="modal-actions">
+        <button id="add-knowledge-submit" class="btn btn-primary">Add</button>
+        <button id="add-knowledge-cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="rename-notebook-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Rename Notebook</h3>
+      <input type="text" id="rename-notebook-input" placeholder="Notebook name">
+      <div class="modal-actions">
+        <button id="rename-notebook-submit" class="btn btn-primary">Rename</button>
+        <button id="rename-notebook-cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/notebooks.js"></script>
+  <script src="scripts/knowledge.js"></script>
+  <script src="scripts/chat.js"></script>
+</body>
+</html>
